@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import Screen from '../components/screen'
 import homebg from '../images/home.png'
 import georgesbg from '../images/georges.jpg'
+import rsvpbg from '../images/rsvp.jpg'
 
 const IndexPage = () => (
   <Layout>
@@ -43,7 +44,7 @@ const IndexPage = () => (
           </h1>
           <div
             style={{
-              'background-color': 'rgba(0, 0, 0, 0.5)',
+              'background-color': 'rgba(0, 0, 0, 0.8)',
               padding: '10px',
             }}
           >
@@ -57,7 +58,7 @@ const IndexPage = () => (
         </div>
         <div
           style={{
-            'background-color': 'rgba(0, 0, 0, 0.5)',
+            'background-color': 'rgba(0, 0, 0, 0.8)',
             padding: '10px',
           }}
         >
@@ -74,11 +75,11 @@ const IndexPage = () => (
         </div>
       </div>
     </Screen>
-    <Screen id="rsvp" image="https://picsum.photos/2048/1024.png">
+    <Screen id="rsvp" image={rsvpbg}>
       <h1 style={{ 'font-size': '3.5rem' }}>Please RSVP</h1>
       <div
         style={{
-          'background-color': 'rgba(0, 0, 0, 0.5)',
+          'background-color': 'rgba(0, 0, 0, 0.8)',
           padding: '10px 50px',
           'justify-content': 'center',
           'align-items': 'center',
@@ -87,7 +88,7 @@ const IndexPage = () => (
         }}
       >
         <p>Please mention who will be attending, if you need parking, if you plan on staying at the hotel (we might be able to get a rate) or if you have food preferences or allergies.</p>
-        <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" style={{ 'justify-content': 'center', 'text-align': 'center' }}>
+        <form name="rsvp" data-netlify={true} data-netlify-honeypot="bot-field" style={{ 'justify-content': 'center', 'text-align': 'center' }}>
           <input type="hidden" name="bot-field" />
           <div className="field half first">
             <label htmlFor="name">Name&nbsp;</label>
