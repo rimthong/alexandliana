@@ -16,7 +16,7 @@ const RSVP = ({lang}) => (
       }}
     >
       <p>Please mention who will be attending, if you need parking, if you plan on staying at the hotel (we might be able to get a rate) or if you have food preferences or allergies.</p>
-      <form name="rsvp" data-netlify={true} data-netlify-honeypot="bot-field" method="POST" style={{ justifyContent: 'center', textAlign: 'center' }}>
+      <form name="rsvp" data-netlify={true} data-netlify-honeypot="bot-field" method="POST" style={{ justifyContent: 'center', textAlign: 'center' }} action="/success?no-cache=1">
         <input type="hidden" name="bot-field" />
         <div className="field half first">
           <label htmlFor="name">Name&nbsp;</label>
