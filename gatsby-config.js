@@ -34,6 +34,5 @@ module.exports = {
         useLangKeyLayout: false,
       },
     },
-    'gatsby-plugin-offline',
   ],
 };
