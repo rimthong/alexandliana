@@ -5,7 +5,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'gatsby-starter-default',
         short_name: 'starter',
@@ -15,16 +15,25 @@ module.exports = {
         display: 'minimal-ui',
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
-      resolve: `gatsby-plugin-google-fonts`,
+    },
+    {
+      resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          `lobster`,
-          `pacifico`,
-          `arimo`,
-          `josefin sans`,
-        ]
-      }
+          'lobster',
+          'pacifico',
+          'arimo',
+          'josefin sans',
+        ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-i18n',
+      options: {
+        langKeyDefault: 'en',
+        useLangKeyLayout: false,
+      },
     },
     'gatsby-plugin-offline',
   ],
-}
+};

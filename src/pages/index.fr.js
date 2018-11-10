@@ -2,7 +2,7 @@ import React from 'react'
 import Main from '../components/main'
 
 const IndexPage = () => (
-  <Main lang="en" />
+  <Main lang="fr" />
 )
 
 export default IndexPage

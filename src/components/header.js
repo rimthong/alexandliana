@@ -1,7 +1,7 @@
 import React from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <nav
     data-scroll-header
     style={{
@@ -17,26 +17,17 @@ const Header = ({ siteTitle }) => (
         maxWidth: 960,
         padding: '1.0rem 1.0rem',
         display: 'flex',
-        'flex-direction': 'row',
-        'justify-content': 'space-around',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
       }}
     >
-      <AnchorLink
-				class="nav-link"
-        href='#home'
-      >
+      <AnchorLink className="nav-link" href="#home">
         Home
       </AnchorLink>
-      <AnchorLink
-				class="nav-link"
-        href='#details'
-      >
+      <AnchorLink className="nav-link" href="#details">
         Details
       </AnchorLink>
-      <AnchorLink
-				class="nav-link"
-        href='#rsvp'
-      >
+      <AnchorLink className="nav-link" href="#rsvp">
         RSVP
       </AnchorLink>
     </div>
