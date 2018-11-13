@@ -1,7 +1,20 @@
 import React from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
-const Header = () => (
+const t = {
+  en: {
+    home: "Home",
+    details: "Details",
+    rsvp: "RSVP",
+  },
+  fr: {
+    home: "Accueil",
+    details: "Détails",
+    rsvp: "Réserver",
+  },
+};
+
+const Header = ({lang = 'en'}) => (
   <nav
     data-scroll-header
     style={{
@@ -22,13 +35,13 @@ const Header = () => (
       }}
     >
       <AnchorLink className="nav-link" href="#home">
-        Home
+        {t[lang].home}
       </AnchorLink>
       <AnchorLink className="nav-link" href="#details">
-        Details
+        {t[lang].details}
       </AnchorLink>
       <AnchorLink className="nav-link" href="#rsvp">
-        RSVP
+        {t[lang].rsvp}
       </AnchorLink>
     </div>
   </nav>

@@ -2,7 +2,32 @@ import React from 'react'
 import Screen from './screen'
 import georgesbg from '../images/georges.jpg'
 
-const Details = ({lang}) => (
+const t = {
+  en: {
+    title1: "Join us",
+    title2: "for Brunch",
+    description: "We'll be at Bar Georges, a lovely victorian mansion in the middle of downtown Montreal with an exquisite menu. Menu will have vegetarian options.",
+    detail1: "Two blocks from Peel Metro.",
+    detail2: "Parking included in wedding.",
+    detail3: "Hotel on premise available.",
+    when: "October 13th",
+    whenDetail1: "10:00am Reception",
+    whenDetail2: "11:00am Ceremony, followed by brunch!",
+  },
+  fr: {
+    title1: "Vous êtes invités",
+    title2: "Pour un brunch!",
+    description: "Nous serons au Bar Georges, une maison victorienne en plein coeur de Montréal avec un menu exquis. Options végétariennes disponibles!",
+    detail1: "À deux blocs de Metro Peel.",
+    detail2: "Stationnement inclu.",
+    detail3: "Hotel sur place disponible.",
+    when: "13 Octobre",
+    whenDetail1: "10:00am Réception",
+    whenDetail2: "11:00am Cérémonie suivie du brunch!",
+  },
+};
+
+const Details = ({lang = 'en'}) => (
   <Screen id="details" image={georgesbg}>
     <div style={{
         display: 'flex',
@@ -24,7 +49,7 @@ const Details = ({lang}) => (
             marginBottom: '70px',
           }}
         >
-          Join us <br /> for Brunch!
+          {t[lang].title1} <br /> {t[lang].title2}
         </h1>
         <div
           style={{
@@ -32,11 +57,11 @@ const Details = ({lang}) => (
             padding: '10px',
           }}
         >
-          <p>We'll be at Bar Georges, a lovely victorian mansion in the middle of downtown Montreal with an exquisite menu. Menu will have vegetarian options.</p>
+          <p>{t[lang].description}</p>
           <ul>
-            <li>Two blocks from Peel Metro.</li>
-            <li>Parking included in wedding.</li>
-            <li>Hotel on premise available.</li>
+            <li>{t[lang].detail1}</li>
+            <li>{t[lang].detail2}</li>
+            <li>{t[lang].detail3}</li>
           </ul>
         </div>
       </div>
@@ -47,10 +72,10 @@ const Details = ({lang}) => (
         }}
       >
         <div>
-          <h2>October 13th</h2>
+          <h2>{t[lang].when}</h2>
           <ul>
-            <li>10:00am Reception</li>
-            <li>11:00am Ceremony, followed by brunch!</li>
+            <li>{t[lang].whenDetail1}</li>
+            <li>{t[lang].whenDetail2}</li>
           </ul>
         </div>
         <div>

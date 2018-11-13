@@ -6,7 +6,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import './layout.css'
 
-const Layout = ({ children }) => (
+const Layout = ({ children, lang = 'en', menu = true }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -26,9 +26,9 @@ const Layout = ({ children }) => (
             { name: 'keywords', content: 'sample, something' },
           ]}
         >
-          <html lang="en" />
+          <html lang={lang} />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        { menu ? <Header siteTitle={data.site.siteMetadata.title} lang={lang}/> : null }
         <div
           style={{
             height: '100%',
@@ -43,6 +43,8 @@ const Layout = ({ children }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  lang: PropTypes.string,
+  menu: PropTypes.bool,
 }
 
 export default Layout

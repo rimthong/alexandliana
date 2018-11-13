@@ -3,10 +3,21 @@ import Layout from './layout'
 import Screen from './screen'
 import rsvpbg from '../images/rsvp.jpg'
 
+const t = {
+  en: {
+    title: "Thank you!",
+    text: "Thank you for RSVPing, see you soon!",
+  },
+  fr: {
+    title: "Merci!",
+    text: "Merci pour la réservation, à bientôt!",
+  },
+};
+
 const Success = ({lang}) => (
-  <Layout>
+  <Layout lang={lang} menu={false}>
     <Screen image={rsvpbg}>
-      <h1 style={{ fontSize: '3.5rem' }}>Thank you</h1>
+      <h1 style={{ fontSize: '3.5rem' }}>{t[lang].title}</h1>
       <div
         style={{
           backgroundColor: 'rgba(0, 0, 0, 0.8)',
@@ -17,7 +28,7 @@ const Success = ({lang}) => (
           margin: '0 auto',
         }}
       >
-        <p>Thank you for RSVPing, see you soon!</p>
+        <p>{t[lang].text}</p>
       </div>
     </Screen>
   </Layout>
