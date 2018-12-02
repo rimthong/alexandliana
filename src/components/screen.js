@@ -6,9 +6,9 @@ const Screen = ({ id, children, image }) => (
     id={id}
     style={{
       margin: '0 auto',
-      padding: '50px 200px',
       backgroundImage: `url(${image})`,
       height: '100%',
+      width: '100%',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',

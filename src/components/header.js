@@ -5,11 +5,13 @@ const t = {
   en: {
     home: "Home",
     details: "Details",
+    venue: "Venue",
     rsvp: "RSVP",
   },
   fr: {
     home: "Accueil",
     details: "Détails",
+    venue: "Emplacement",
     rsvp: "Réserver",
   },
 };
@@ -39,6 +41,9 @@ const Header = ({lang = 'en'}) => (
       </AnchorLink>
       <AnchorLink className="nav-link" href="#details">
         {t[lang].details}
+      </AnchorLink>
+      <AnchorLink className="nav-link" href="#venue">
+        {t[lang].venue}
       </AnchorLink>
       <AnchorLink className="nav-link" href="#rsvp">
         {t[lang].rsvp}
