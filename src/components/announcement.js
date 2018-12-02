@@ -9,7 +9,7 @@ const t = {
     date2: "2019",
   },
   fr: {
-    curveText: "On se marie!",
+    curveText: "Venez pour notre mariage!",
     date1: "13 Octobre",
     date2: "2019",
   },
@@ -17,9 +17,9 @@ const t = {
 
 const Announcement = ({lang}) => (
   <Screen id="home" image={homebg}>
-    <svg viewBox="0 0 200 200">
-      <path id="curve" d="M10 80 Q 95 10 180 80" />
-      <text width="500" style={{fill: 'white', fontFamily: 'pacifico'}}>
+    <svg viewBox="0 0 200 100">
+      <path id="curve" d="M10 90 Q 100 20 190 90" />
+      <text width="100%"  text-align="justify" style={{fill: 'white', fontFamily: 'pacifico'}}>
         <textPath href="#curve">
           {t[lang].curveText}
         </textPath>
