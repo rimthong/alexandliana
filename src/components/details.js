@@ -56,7 +56,7 @@ const Details = ({lang = 'en'}) => (
       </div>
       <div
         style={{
-          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          backgroundColor: 'rgba(0, 0, 0, 0.6)',
           padding: '10px',
         }}
       >

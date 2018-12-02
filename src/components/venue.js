@@ -49,12 +49,16 @@ const Venue = ({lang = 'en'}) => (
           flexDirection: 'row',
           justifyContent: 'center',
           maxWidth: '685px',
-          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          backgroundColor: 'rgba(0, 0, 0, 0.6)',
           padding: '10px',
         }}
       >
+        <div>
+          <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.543092049602!2d-73.57791038452005!3d45.49914493913222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a41975c7943%3A0xd36f5ad8ca917aa5!2sBar+George!5e0!3m2!1sen!2sca!4v1540177150840" width="300" height="300" frameborder="0" allowfullscreen></iframe>
+        </div>
         <div
           style={{
+            marginLeft: '10px',
           }}
         >
           <p>{t[lang].description}</p>
@@ -63,9 +67,6 @@ const Venue = ({lang = 'en'}) => (
             <li>{t[lang].detail2}</li>
             <li>{t[lang].detail3}</li>
           </ul>
-        </div>
-        <div>
-          <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.543092049602!2d-73.57791038452005!3d45.49914493913222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a41975c7943%3A0xd36f5ad8ca917aa5!2sBar+George!5e0!3m2!1sen!2sca!4v1540177150840" width="300" height="300" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
     </div>

@@ -26,7 +26,7 @@ const RSVP = ({lang = 'en'}) => (
     <h1 style={{ fontSize: '3.5rem' }}>{t[lang].title}</h1>
     <div
       style={{
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        backgroundColor: 'rgba(0, 0, 0, 0.6)',
         padding: '10px 50px',
         justifyContent: 'center',
         alignItems: 'center',
