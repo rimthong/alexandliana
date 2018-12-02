@@ -31,35 +31,17 @@ const t = {
 
 const Details = ({lang = 'en'}) => (
   <Screen id="details" image={background}>
-    <div style={{
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-      }}
+    <div className="detail-container"
     >
-      <div
-        style={{
-          padding: '25px',
-          maxWidth: '472px',
-        }}
-      >
-        <h1
-          style={{
-            transform: 'rotate(-20deg)',
-            fontSize: '3.5rem',
-            textAlign: 'center',
-            marginBottom: '70px',
-          }}
-        >
-          {t[lang].title1} <br /> {t[lang].title2}
+      <div className="detail-title">
+        <h1>
+          {t[lang].title1}
+        </h1>
+        <h1>
+          {t[lang].title2}
         </h1>
       </div>
-      <div
-        style={{
-          backgroundColor: 'rgba(0, 0, 0, 0.6)',
-          padding: '10px',
-        }}
-      >
+      <div className="dark-box">
         <div>
           <h2>{t[lang].when}</h2>
           <ul>

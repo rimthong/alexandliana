@@ -8,6 +8,85 @@ body {
   margin: 0;
   height: 100%;
 }
+
+.detail-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.detail-title {
+  display: flex;
+  flex-direction: column;
+  transform: rotate(-20deg);
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 70px;
+  padding: 25px;
+  max-width: 472px;
+}
+
+@media only screen and (max-width: 600px) {
+  .detail-container {
+    flex-direction: column;
+  }
+  .detail-title {
+    transform: rotate(0deg);
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 25px;
+    max-width: 472px;
+  }
+  .detail-title > h1 {
+    margin-bottom: 0px;
+  }
+}
+
+.venue-info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 685px;
+}
+
+.venue-map {
+  display: block;
+}
+
+.venue-map-link {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .venue-map {
+    display: none;
+  }
+  .venue-map-link {
+    display: block;
+    color: white;
+    text-align: right;
+  }
+  .venue-info-container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  p.rsvp-text {
+    margin-bottom: 10px;
+  }
+}
+
+.dark-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+}
+
+.label-top {
+  display: flex;
+  flex-direction: column;
+}
+
 #___gatsby {
   height: 100%;
 }
@@ -150,7 +229,7 @@ select {
 [type=submit],
 button,
 html [type=button] {
-  -webkit-appearance: button;
+  -webkit-appearance: none;
 }
 [type=button]::-moz-focus-inner,
 [type=reset]::-moz-focus-inner,

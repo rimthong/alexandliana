@@ -27,29 +27,29 @@ const RSVP = ({lang = 'en'}) => (
     <div
       style={{
         backgroundColor: 'rgba(0, 0, 0, 0.6)',
-        padding: '10px 50px',
+        padding: '10px 12px',
         justifyContent: 'center',
         alignItems: 'center',
         maxWidth: '1000px',
         margin: '0 auto',
       }}
     >
-      <p>{t[lang].text}</p>
+      <p className="rsvp-text">{t[lang].text}</p>
       <form name="rsvp" data-netlify={true} data-netlify-honeypot="bot-field" method="POST" style={{ justifyContent: 'center', textAlign: 'center' }} action="/success?no-cache=1">
         <input type="hidden" name="bot-field" />
-        <div className="field half first">
+        <div className="label-top">
           <label htmlFor="name">{t[lang].name}&nbsp;</label>
           <input type="text" name="name" id="name" />
         </div>
-        <div className="field half">
+        <div className="label-top">
           <label htmlFor="email">{t[lang].email}&nbsp;</label>
           <input type="text" name="email" id="email" />
         </div>
-        <div className="field">
+        <div className="label-top">
           <label htmlFor="message">{t[lang].message}&nbsp;</label>
-          <textarea name="message" id="message" rows="6"></textarea>
+          <textarea name="message" id="message" rows="4"></textarea>
         </div>
-        <button type="submit">{t[lang].rsvp}</button>
+        <button type="submit" style={{marginTop:'10px'}}>{t[lang].rsvp}</button>
       </form>
     </div>
   </Screen>

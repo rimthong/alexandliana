@@ -13,6 +13,7 @@ const t = {
     when: "October 13th",
     whenDetail1: "10:00am Reception",
     whenDetail2: "11:00am Ceremony, followed by brunch!",
+    openMap: "Open Map",
   },
   fr: {
     title1: "L'Emplacement",
@@ -23,6 +24,7 @@ const t = {
     when: "13 Octobre",
     whenDetail1: "10:00am Réception",
     whenDetail2: "11:00am Cérémonie suivie du brunch!",
+    openMap: "Ouvrir Carte",
   },
 };
 
@@ -42,18 +44,8 @@ const Venue = ({lang = 'en'}) => (
       >
         {t[lang].title1}
       </h1>
-      <div
-        style={{
-          padding: '25px',
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'center',
-          maxWidth: '685px',
-          backgroundColor: 'rgba(0, 0, 0, 0.6)',
-          padding: '10px',
-        }}
-      >
-        <div>
+      <div className="dark-box venue-info-container">
+        <div className="venue-map">
           <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.543092049602!2d-73.57791038452005!3d45.49914493913222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a41975c7943%3A0xd36f5ad8ca917aa5!2sBar+George!5e0!3m2!1sen!2sca!4v1540177150840" width="300" height="300" frameborder="0" allowfullscreen></iframe>
         </div>
         <div
@@ -67,6 +59,7 @@ const Venue = ({lang = 'en'}) => (
             <li>{t[lang].detail2}</li>
             <li>{t[lang].detail3}</li>
           </ul>
+          <a className="venue-map-link" href="https://www.google.com/maps?ll=45.499141,-73.575722&z=16&t=m&hl=en-CA&gl=CA&mapclient=embed&cid=15235495951575644837" target="_blank">{t[lang].openMap}</a>
         </div>
       </div>
     </div>
