@@ -342,6 +342,10 @@ h1 {
 path {
   fill: transparent;
 }
+.link {
+  color: white;
+  text-decoration: underline;
+}
 .nav-link {
   color: white;
   text-decoration: none;

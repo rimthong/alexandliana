@@ -6,7 +6,7 @@ const t = {
   en: {
     title1: "The Venue",
     title2: "for Brunch",
-    description: "We'll be at Bar Georges, a lovely victorian mansion in the middle of downtown Montreal with an exquisite menu. Menu will have vegetarian options.",
+    description: "We'll be at <a class='link' href='https://www.bargeorge.ca/' target='_blank'>Bar Georges</a>, a lovely victorian mansion in the middle of downtown Montreal with an exquisite menu. Menu will have vegetarian options.",
     detail1: "Two blocks from Peel Metro.",
     detail2: "Parking included in wedding.",
     detail3: "Hotel on premise available.",
@@ -17,7 +17,7 @@ const t = {
   },
   fr: {
     title1: "L'Emplacement",
-    description: "Nous serons au Bar Georges, une maison victorienne en plein coeur de Montréal avec un menu exquis. Options végétariennes disponibles!",
+    description: "Nous serons au <a class='link' href='https://www.bargeorge.ca/' target='_blank'>Bar Georges</a>, une maison victorienne en plein coeur de Montréal avec un menu exquis. Options végétariennes disponibles!",
     detail1: "À deux blocs de Metro Peel.",
     detail2: "Stationnement inclu.",
     detail3: "Hotel sur place disponible.",
@@ -53,7 +53,7 @@ const Venue = ({lang = 'en'}) => (
             marginLeft: '10px',
           }}
         >
-          <p>{t[lang].description}</p>
+          <p dangerouslySetInnerHTML={{__html: t[lang].description}}></p>
           <ul>
             <li>{t[lang].detail1}</li>
             <li>{t[lang].detail2}</li>
