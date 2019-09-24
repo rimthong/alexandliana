@@ -11,8 +11,8 @@ const t = {
     detail2: "Parking included in wedding.",
     detail3: "Hotel on premise available.",
     when: "October 13th",
-    whenDetail1: "10:00am Reception",
-    whenDetail2: "11:00am Ceremony, followed by brunch!",
+    whenDetail1: "11:00am Reception",
+    whenDetail2: "Ceremony, followed by brunch!",
     whenDetail3: "More details to come!",
   },
   fr: {
@@ -23,8 +23,8 @@ const t = {
     detail2: "Stationnement inclu.",
     detail3: "Hotel sur place disponible.",
     when: "13 Octobre",
-    whenDetail1: "10:00am Réception",
-    whenDetail2: "11:00am Cérémonie suivie du brunch!",
+    whenDetail1: "11:00am Réception",
+    whenDetail2: "Cérémonie suivie du brunch!",
     whenDetail3: "Autres détails à venir!",
   },
 };
